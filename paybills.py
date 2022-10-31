@@ -17,18 +17,30 @@ If new:
 
 If preconfigured:
     Welcome user. What bills are we paying today?
-    list keys from mylinks and option to add a new key (sort alphabetical?)
-
-
-
-def addBill()
-    key = user input 
-    value = user input 
-    append mylinks("a":"b") 
+    list keys from mylinks and option to add, delete, or change a key and value (sort alphabetical?)
 
 #Open value webpage where a is the key from mylinks
 def openBill(a)
-    
+    open mylinks{a} #get value of key a
+
+#Create a new key:value pair
+def addBill()
+    a = user input 
+    b = user input 
+    append mylinks("a":"b") 
+
+#Delete a key:value pair
+def removeBill()
+    a = user input
+    del mylinks["a"]
+
+
+def saveConf(mylinks)
+    overwrite mylinks as mylinks in config file
+
+def closeProgram()
+    close config.txt
+
     
 
 
